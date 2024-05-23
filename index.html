@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web develop</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container-exterior">
+      <div class="container-interior">
+        <form id="form-login" onsubmit="event.preventDefault();">
+          <p>Please provide your credentials:</p>
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required minlength="4" maxlength="50" size="50" value="admin">
+          <br>
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required minlength="4" maxlength="50" size="50" value="admin">
+          <br>
+          <br><br>
+          <p id="form-login-message">Message: </p>
+          <div class="form-login-button-container">
+            <button id="button-login">Login</button>
+            <button id="button-logout">Logout</button>
+          </div>
+        </form>
+        <hr>
+        <div class="geometry-forms">
+          <form id="form-construction" class="geometry-form" onsubmit="event.preventDefault();">
+            <h2>Consulte construcciones</h2>
+            Identificador:
+            <textarea rows="1" cols="100" id="form-construction-gid" name="gid"></textarea>
+            <br>Ciudad<br>
+            <textarea rows="1" cols="100" id="form-construction-city" name="city">Valencia</textarea><br>
+            Dias de obra<br>
+            <textarea rows="1" cols="100" id="form-construction-days_limit" name="days_limit">84</textarea><br>
+            Area<br>
+            <textarea rows="1" cols="100" id="form-construction-area" name="area"></textarea><br>
+            Empresa responsable<br>
+            <textarea rows="1" cols="100" id="form-construction-org_responsible" name="org_responsible">CAQUINEU</textarea><br>
+            Geometry WKT<br>
+            <textarea rows="1" cols="100" id="form-construction-geomWkt" name="geomWkt">POLYGON((0 0, 1 0, 1 1, 0 1, 0 0))
+            </textarea>
+            <br>
+            <p rows="1" cols="100" id="form-construction-message" name="message">Message:</p>
+            <div class="form-login-button-container">
+              <button id="form-construction-insert">Insert</button>
+              <button id="form-construction-update">Update</button>
+              <button id="form-construction-delete">Delete</button>
+              <button id="form-construction-select">Select</button>
+            </div>
+          </form>
+
+          <form id="form-pipes" class="geometry-form" onsubmit="event.preventDefault();">
+            <h2>Consulte Tuberias</h2>
+            Identificador:
+            <textarea rows="1" cols="100" id="form-pipes-gid" name="gid"></textarea>
+            <br>Descripcion<br>
+            <textarea rows="1" cols="100" id="form-pipes-Descripcion" name="descripcion">nuevo, carrer Belgica </textarea><br>
+            <br>Longitud<br>
+            <textarea rows="1" cols="100" id="form-pipes-length" name="length"></textarea><br>
+            Material<br>
+            <textarea rows="1" cols="100" id="form-pipes-Material" name="material">PVC</textarea><br>
+            Uso<br>
+            <textarea rows="1" cols="100" id="form-pipes-Uso" name="use">Alcantarillado</textarea><br>
+            Geometry WKT<br>
+            <textarea rows="1" cols="100" id="form-pipes-geomWkt" name="geomWkt">LINESTRING (30 10, 10 30, 40 40)
+            </textarea>
+            <br>
+            <p rows="1" cols="100" id="form-pipes-message" name="message">Message:</p>
+            <div class="form-login-button-container">
+              <button id="form-pipes-insert">Insert</button>
+              <button id="form-pipes-update">Update</button>
+              <button id="form-pipes-delete">Delete</button>
+              <button id="form-pipes-select">Select</button>
+            </div>
+          </form>
+
+          <form id="form-well" class="geometry-form" onsubmit="event.preventDefault();">
+            <h2>Consulte Pozos</h2>
+            Identificador:
+            <textarea rows="1" cols="100" id="form-well-gid" name="gid"></textarea>
+            <br>Descripcion<br>
+            <textarea rows="1" cols="100" id="form-well-Descripcion" name="descripcion">Pozo entrada</textarea><br>
+            Profundidad<br>
+            <textarea rows="1" cols="100" id="form-well-Depth" name="depth">4</textarea><br>
+            Radio<br>
+            <textarea rows="1" cols="100" id="form-well-Radio" name="radius">2</textarea><br>
+            Tipo<br>
+            <textarea rows="1" cols="100" id="form-well-Tipo" name="type">alcantarillado</textarea><br>
+            Geometry WKT<br>
+            <textarea rows="1" cols="100" id="form-well-geomWkt" name="geomWkt">POINT (80 50)
+            </textarea>
+            <br>
+            <p rows="1" cols="100" id="form-well-message" name="message">Message:</p>
+            <div class="form-login-button-container">
+              <button id="form-well-insert">Insert</button>
+              <button id="form-well-update">Update</button>
+              <button id="form-well-delete">Delete</button>
+              <button id="form-well-select">Select</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="map"></div>
+        <p>Probando</p>
+      </div>
+    </div>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
