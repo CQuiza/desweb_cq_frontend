@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { URL_API } from './settings';
+import {  MAP_MAIN, URL_API, URL_GEOSERVER} from './settings';
 
 export function insertWells() {
     let descripcion = document.getElementById('form-well-Descripcion').value;
@@ -142,3 +142,25 @@ export function selectWells() {
         });
 }
 
+
+export function startDrawingWells(){
+    //Enables de draw interaction
+    MAP_MAIN.startDrawingWells();
+    document.getElementById("map-message").innerHTML="Draw point interaction active"
+}
+
+export function stopDrawingWells(){
+    //Enables de draw interaction
+    MAP_MAIN.stopDrawingWells();
+    document.getElementById("map-message").innerHTML="Draw point interaction inactive"
+}
+
+export function reloadWMSWellsLayer(){
+    MAP_MAIN.reloadWMSWellsLayer();
+    document.getElementById("map-message").innerHTML="WMS Wells reloaded"
+}
+
+export function clearVectorWellsLayer(){
+    MAP_MAIN.clearVectorWellsLayer();
+    document.getElementById("map-message").innerHTML="Vector Wells layer cleared"
+}

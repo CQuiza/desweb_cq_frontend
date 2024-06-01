@@ -1,5 +1,6 @@
 import axios from 'axios';
-import { URL_API } from './settings';
+import { MAP_MAIN, URL_API, URL_GEOSERVER } from './settings';
+
 
 export function insertConstruction() {
     let city = document.getElementById('form-construction-city').value;
@@ -140,3 +141,24 @@ export function selectConstruction() {
         });
 }
 
+export function startDrawingConstructions(){
+    //Enables de draw interaction
+    MAP_MAIN.startDrawingConstructions();
+    document.getElementById("map-message").innerHTML="Draw poligon interaction active"
+}
+
+export function stopDrawingConstructions(){
+    //Enables de draw interaction
+    MAP_MAIN.stopDrawingConstructions();
+    document.getElementById("map-message").innerHTML="Draw poligon interaction inactive"
+}
+
+export function reloadWMSConstructionsLayer(){
+    MAP_MAIN.reloadWMSConstructionsLayer();
+    document.getElementById("map-message").innerHTML="WMS Constructions reloaded"
+}
+
+export function clearVectorConstructionsLayer(){
+    MAP_MAIN.clearVectorConstructionsLayer();
+    document.getElementById("map-message").innerHTML="Vector Constructions layer cleared"
+}

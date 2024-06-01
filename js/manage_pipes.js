@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { URL_API } from './settings';
+import {  MAP_MAIN, URL_API, URL_GEOSERVER} from './settings';
 
 export function insertPipes() {
     let descripcion = document.getElementById('form-pipes-Descripcion').value;
@@ -150,3 +150,25 @@ export function selectPipes() {
         });
 }
 
+
+export function startDrawingPipes(){
+    //Enables de draw interaction
+    MAP_MAIN.startDrawingPipes();
+    document.getElementById("map-message").innerHTML="Draw linestring interaction active"
+}
+
+export function stopDrawingPipes(){
+    //Enables de draw interaction
+    MAP_MAIN.stopDrawingPipes();
+    document.getElementById("map-message").innerHTML="Draw linestring interaction inactive"
+}
+
+export function reloadWMSPipesLayer(){
+    MAP_MAIN.reloadWMSPipesLayer();
+    document.getElementById("map-message").innerHTML="WMS Pipes reloaded"
+}
+
+export function clearVectorPipesLayer(){
+    MAP_MAIN.clearVectorPipesLayer();
+    document.getElementById("map-message").innerHTML="Vector Pipes layer cleared"
+}
