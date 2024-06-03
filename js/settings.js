@@ -5,6 +5,8 @@ export var URL_GEOSERVER="http://localhost:8080/geoserver"
 //export var URL_API="https://vps-3206e74d.vps.ovh.net/desweb_cq";
 //export var URL_GEOSERVER="https://vps-3206e74d.vps.ovh.net/geoserver";
 
+//export var URL_GEOSERVER="https://37.187.181.98/geoserver";
+
 //setMAP_MAIN is to be able to modify the MAP_MAIN variable
 //ouside this module
 export var MAP_MAIN; export function setMAP_MAIN(value){MAP_MAIN = value;}
