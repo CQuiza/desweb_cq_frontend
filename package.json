@@ -4,7 +4,8 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "build-vps": "vite build --base=https://vps-3206e74d.vps.ovh.net/desweb_cq/"
   },
   "devDependencies": {
     "vite": "^5.2.11"

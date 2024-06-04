@@ -1,9 +1,9 @@
 //LOCAL
-export var URL_API="http://localhost:8000"
-export var URL_GEOSERVER="http://localhost:8080/geoserver"
+//export var URL_API="http://localhost:8000"
+//export var URL_GEOSERVER="http://localhost:8080/geoserver"
 
-//export var URL_API="https://vps-3206e74d.vps.ovh.net/desweb_cq";
-//export var URL_GEOSERVER="https://vps-3206e74d.vps.ovh.net/geoserver";
+export var URL_API="https://vps-3206e74d.vps.ovh.net/api_desweb_cq";
+export var URL_GEOSERVER="https://vps-3206e74d.vps.ovh.net/geoserver";
 
 //export var URL_GEOSERVER="https://37.187.181.98/geoserver";
 
