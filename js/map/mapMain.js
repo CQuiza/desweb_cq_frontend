@@ -339,17 +339,17 @@ export class MapMain{
       }
   
       startDrawingPipes(){
-        this.vector_constructions_layer_draw_interaction.setActive(true);
+        this.vector_pipes_layer_draw_interaction.setActive(true);
       }
       stopDrawingPipes(){
-        this.vector_constructions_layer_draw_interaction.setActive(false);
+        this.vector_pipes_layer_draw_interaction.setActive(false);
       }
   
       clearVectorPipesLayer(){
-        this.vector_constructions_layer_source_draw.clear()
+        this.vector_pipes_layer_source_draw.clear()
       }
       reloadWMSPipesLayer(){
-        this.wms_constructions_layer.getSource().updateParams({"time": Date.now()})
+        this.wms_pipes_layer.getSource().updateParams({"time": Date.now()})
       }
 
       // wells
@@ -360,7 +360,7 @@ export class MapMain{
         * 		"Point","LineString","Polygon"
         * */
         this.vector_wells_layer_draw_interaction = new Draw({
-               source: this.vector_constructions_layer_source_draw, //source of the layer where the poligons will be drawn
+               source: this.vector_wells_layer_source_draw, //source of the layer where the poligons will be drawn
                type: ('Point') //geometry type
              });
          
