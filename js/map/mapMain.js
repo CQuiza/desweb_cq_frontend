@@ -394,6 +394,27 @@ export class MapMain{
       reloadWMSWellsLayer(){
         this.wms_wells_layer.getSource().updateParams({"time": Date.now()})
       }
-      
+
+        // Eventos de Clic en el Mapa
+  add_map_click(){
+    // Activa el evento de clic en el mapa
+    this.map.on("singleclick", this.captura_coords_click);
   }
+
+  remove_map_click(){
+    // Desactiva el evento de clic en el mapa
+    this.map.un("singleclick", this.captura_coords_click);
+  }
+
+  captura_coords_click(event) {
+    // Maneja el evento de clic en el mapa
+    var coord = event.coordinate;
+    console.log(String(coord[0]) + ',' + String(coord[1]));
+    // Aquí puedes llamar a una función como st_coords_select(coord) si es necesario
+  }
+}
+      
+
+
+  
       
